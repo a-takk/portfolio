@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "../src/css/navbar.css";
-import "../src/css/hero.css";
+import React, { useEffect, useState, useRef } from "react";
+import "./css/navbar.css";
+import "./css/hero.css";
+import "./css/intro.css";
 
 function App() {
   const sentence = "Welcome";
+  const targetDiv = useRef(null);
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
+  const scrollToDiv = () => {
+    if (targetDiv.current) {
+      targetDiv.current.scrollIntoView();
+    }
+  };
 
   useEffect(() => {
     if (index < sentence.length) {
@@ -28,7 +35,7 @@ function App() {
         <div>
           <ul className="navbarlinks">
             <li>
-              <a href="/" className="navbarlink">
+              <a href="/" className="navbarlink" onClick={scrollToDiv}>
                 Intro
               </a>
             </li>
@@ -48,7 +55,16 @@ function App() {
       <div className="herocontainer">
         <h1 className="heroheading">{displayedText}</h1>
       </div>
-      <div className="introcontainer"></div>
+      <div className="introcontainer" ref={targetDiv}>
+        <div className="introdiv1">
+          <h1 className="introheading">Who am I?</h1>
+          <a className="introtext1">My name is Aman Taak, I am a Graduate </a>
+        </div>
+        <div className="introdiv2">
+          <h1 className="">My name is aman</h1>
+          <a className="">Hello there</a>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.introcontainer {
+  display: flex;
+  height: 100vh;
+}
+
+.introdiv1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  flex: 1;
+}
+
+.introdiv2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  flex: 1;
+}
