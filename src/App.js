@@ -48,7 +48,7 @@ function App() {
       <div className="herocontainer">
         <h1 className="heroheading">{displayedText}</h1>
       </div>
-      <div></div>
+      <div className="introcontainer"></div>
     </div>
   );
 }
