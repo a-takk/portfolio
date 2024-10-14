@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+
+.navbarlogo {
+  font: bold;
+  font-size: 50px;
+  margin-left: 15px;
+}
+
+.navbarlink {
+  font-size: 20px;
+}
+
+.navbarlinks {
+  display: flex;
+  gap: 30px;
+  margin-right: 40px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

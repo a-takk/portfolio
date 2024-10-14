@@ -1,0 +1,10 @@
+.herocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.heroheading {
+  font-size: 65px;
+}
